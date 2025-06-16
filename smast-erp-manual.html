@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP SMAST ERP AI+ | ระบบบริหารจัดการแห่งอนาคต สำหรับธุรกิจและฟาร์มสมัยใหม่</title>
+    <meta name="description" content="ระบบ ERP ที่ทันสมัยที่สุด พร้อมปัญญาประดิษฐ์ 65+ ฟีเจอร์อัตโนมัติ สำหรับธุรกิจทุกขนาด รวมถึงฟาร์มและการเกษตรสมัยใหม่">
+    <meta name="keywords" content="ERP, AI, ระบบบริหาร, ฟาร์ม, เกษตร, อัตโนมัติ, สมาร์ทฟาร์ม, ระบบจัดการ">
+    <meta property="og:title" content="TOP SMAST ERP AI+ | ระบบบริหารจัดการแห่งอนาคต">
+    <meta property="og:description" content="ระบบ ERP อัจฉริยะพร้อม AI สำหรับธุรกิจและฟาร์มสมัยใหม่">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Sarabun', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            background: linear-gradient(135deg, #7BC142 0%, #00c969 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2d5a3d;
+        }
+
+        .logo-subtitle {
+            font-size: 11px;
+            color: #838573;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-top: -2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #2d5a3d;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #FF7F50;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #FF7F50;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #3CB371 0%, #2E8B57 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(60,179,113,0.4);
+            background: linear-gradient(135deg, #FF7F50 0%, #FF6347 100%);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #00c969 0%, #7BC142 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .hero-text .description {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #FF7F50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255,127,80,0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255,127,80,0.4);
+            background: #FF6347;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #3CB371;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .ai-agriculture-visual {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin: 20px;
+        }
+
+        .ai-brain {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 100px;
+            background: linear-gradient(135deg, #00c969 0%, #7BC142 100%);
+            border-radius: 60px 60px 40px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,201,105,0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .ai-brain::before {
+            content: '🧠';
+            font-size: 2.5rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .ai-brain::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 30px;
+            height: 30px;
+            background: #ff650e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .plant-elements {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 250px;
+        }
+
+        .plant {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .plant-1 {
+            left: 10%;
+            width: 60px;
+            height: 120px;
+            background: linear-gradient(to top, #2d5a3d 0%, #00c969 100%);
+            border-radius: 30px 30px 0 0;
+            animation: grow 2s ease-in-out infinite alternate;
+        }
+
+        .plant-1::before {
+            content: '🌱';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+        }
+
+        .plant-2 {
+            right: 10%;
+            width: 50px;
+            height: 100px;
+            background: linear-gradient(to top, #2d5a3d 0%, #7BC142 100%);
+            border-radius: 25px 25px 0 0;
+            animation: grow 2.5s ease-in-out infinite alternate;
+        }
+
+        .plant-2::before {
+            content: '🌿';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.8rem;
+        }
+
+        .plant-3 {
+            left: 60%;
+            width: 45px;
+            height: 80px;
+            background: linear-gradient(to top, #2d5a3d 0%, #00c969 100%);
+            border-radius: 22px 22px 0 0;
+            animation: grow 2.2s ease-in-out infinite alternate;
+        }
+
+        .plant-3::before {
+            content: '🌾';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+        }
+
+        .ai-connections {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+        }
+
+        .connection-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,101,14,0.6) 50%, transparent 100%);
+            height: 2px;
+            animation: pulse-line 2s ease-in-out infinite;
+        }
+
+        .line-1 {
+            top: 30%;
+            left: 20%;
+            width: 100px;
+            transform: rotate(45deg);
+            animation-delay: 0s;
+        }
+
+        .line-2 {
+            top: 30%;
+            right: 20%;
+            width: 80px;
+            transform: rotate(-45deg);
+            animation-delay: 0.5s;
+        }
+
+        .line-3 {
+            bottom: 30%;
+            left: 30%;
+            width: 90px;
+            transform: rotate(-30deg);
+            animation-delay: 1s;
+        }
+
+        .data-nodes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .node {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ff650e;
+            border-radius: 50%;
+            animation: pulse-node 1.5s ease-in-out infinite;
+        }
+
+        .node-1 { top: 25%; left: 15%; animation-delay: 0s; }
+        .node-2 { top: 25%; right: 15%; animation-delay: 0.3s; }
+        .node-3 { bottom: 35%; left: 25%; animation-delay: 0.6s; }
+        .node-4 { bottom: 35%; right: 35%; animation-delay: 0.9s; }
+
+        .tech-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0,201,105,0.1) 70%);
+            border-radius: 20px;
+        }
+
+        .feature-showcase {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            max-width: 350px;
+            margin-left: 50px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0px); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        @keyframes grow {
+            0% { transform: scaleY(0.8); }
+            100% { transform: scaleY(1.1); }
+        }
+
+        @keyframes pulse-line {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes pulse-node {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.5); opacity: 1; }
+        }
+
+        .feature-showcase h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 500;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #00c969;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0,201,105,0.2);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #00c969;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: #838573;
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            color: #2d5a3d;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #838573;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #3CB371 0%, #FF7F50 100%);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(60,179,113,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            color: #2d5a3d;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature-description {
+            color: #696969;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .feature-benefits {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .feature-benefits li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .feature-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #3CB371;
+            font-weight: bold;
+        }
+
+        .auto-badge {
+            background: linear-gradient(135deg, #3CB371 0%, #2E8B57 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+        }
+
+        /* Modules Section */
+        .modules {
+            background: #f8f9fa;
+            padding: 100px 0;
+        }
+
+        .modules-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .module-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .module-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .module-icon {
+            font-size: 2.5rem;
+            margin-right: 15px;
+        }
+
+        .module-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d5a3d;
+        }
+
+        .module-description {
+            color: #696969;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .module-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .module-feature {
+            background: #e8f5e8;
+            color: #2E8B57;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Automation Section */
+        .automation {
+            background: linear-gradient(135deg, #2d5a3d 0%, #1a3d2e 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .automation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle fill="rgba(255,255,255,0.05)" cx="200" cy="200" r="100"/><circle fill="rgba(255,255,255,0.03)" cx="800" cy="300" r="150"/><circle fill="rgba(255,255,255,0.04)" cx="400" cy="800" r="120"/></svg>');
+        }
+
+        .automation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .automation-content {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .automation-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .automation-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .automation-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .automation-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .automation-item:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .automation-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .automation-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .automation-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #ff650e 0%, #f7580f 100%);
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta-description {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #f8f9fa;
+            padding: 100px 0;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .contact-details {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .contact-item-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #667eea;
+        }
+
+        .contact-item-text {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d5a3d;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .ai-agriculture-visual {
+                width: 300px;
+                height: 300px;
+                margin: 10px;
+            }
+
+            .feature-showcase {
+                margin-left: 0;
+                margin-top: 20px;
+                max-width: 300px;
+            }
+
+            .ai-brain {
+                width: 80px;
+                height: 70px;
+            }
+
+            .ai-brain::before {
+                font-size: 1.8rem;
+            }
+
+            .plant-elements {
+                height: 180px;
+            }
+
+            .plant-1, .plant-2, .plant-3 {
+                height: 80px;
+                width: 40px;
+            }
+
+            .logo-text {
+                font-size: 22px;
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+                font-size: 14px;
+            }
+        }
+
+        /* Modern AI Elements */
+        .ai-glow {
+            box-shadow: 0 0 20px rgba(0,201,105,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .ai-glow:hover {
+            box-shadow: 0 0 30px rgba(0,201,105,0.5);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00c969 0%, #ff650e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Pulse Animation for AI Elements */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .ai-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Glass Morphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-img">TOP</div>
+                <div>
+                    <div class="logo-text">SMAST ERP AI+</div>
+                    <div class="logo-subtitle">RISE TOGETHER</div>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#features" class="nav-link">ฟีเจอร์</a></li>
+                <li><a href="#modules" class="nav-link">โมดูล</a></li>
+                <li><a href="#automation" class="nav-link">ระบบอัตโนมัติ</a></li>
+                <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">เริ่มใช้งาน</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text fade-in-up">
+                    <h1>ระบบ ERP แห่งอนาคต</h1>
+                    <p class="subtitle">พร้อมปัญญาประดิษฐ์ขั้นสูง</p>
+                    <p class="description">
+                        ระบบบริหารจัดการองค์กรที่ครบครันที่สุด พร้อมฟีเจอร์อัตโนมัติ 65+ ระบบ 
+                        ที่จะเปลี่ยนธุรกิจของคุณให้ทันสมัยและมีประสิทธิภาพสูงสุด 
+                        เหมาะสำหรับทุกธุรกิจ ตั้งแต่โรงงาน ร้านค้า ไปจนถึงฟาร์มและการเกษตรสมัยใหม่
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">เริ่มใช้งานฟรี</a>
+                        <a href="#features" class="btn-secondary">ดูฟีเจอร์ทั้งหมด</a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in-up">
+                    <div class="feature-showcase">
+                        <h3>🎯 ครอบคลุม 9 แผนก</h3>
+                        <div class="feature-grid">
+                            <div class="feature-item">📊 ข้อมูลหลัก</div>
+                            <div class="feature-item">💰 การขาย</div>
+                            <div class="feature-item">🏭 การผลิต</div>
+                            <div class="feature-item">💼 การเงิน</div>
+                            <div class="feature-item">📢 การตลาด</div>
+                            <div class="feature-item">🌱 โรงเพาะ</div>
+                            <div class="feature-item">📈 รายงาน</div>
+                            <div class="feature-item">🤖 อัตโนมัติ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in-up">
+                    <div class="stat-number">65+</div>
+                    <div class="stat-label">ฟีเจอร์อัตโนมัติ</div>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">โมดูลหลัก</div>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">ทำงานไม่หยุด</div>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-label">ประหยัดเวลา</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="features-container">
+            <div class="section-header">
+                <h2 class="section-title">ฟีเจอร์ที่โดดเด่น</h2>
+                <p class="section-subtitle">
+                    ระบบที่ออกแบบมาเพื่อตอบโจทย์ธุรกิจสมัยใหม่ พร้อมความสามารถที่เหนือกว่า
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in-up">
+                    <span class="feature-icon">🤖</span>
+                    <h3 class="feature-title">ระบบอัตโนมัติ AI</h3>
+                    <p class="feature-description">
+                        ปัญญาประดิษฐ์ที่ทำงานแทนคุณ 24/7 ลดการทำงานซ้ำซ้อนและเพิ่มประสิทธิภาพ
+                    </p>
+                    <ul class="feature-benefits">
+                        <li>Auto Stock Management</li>
+                        <li>Auto Commission Calculation</li>
+                        <li>Auto Customer Points</li>
+                        <li>Auto Marketing Campaigns</li>
+                    </ul>
+                    <div>
+                        <span class="auto-badge">Auto Commission</span>
+                        <span class="auto-badge">Auto Stock Update</span>
+                        <span class="auto-badge">Auto Alerts</span>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in-up">
+                    <span class="feature-icon">📊</span>
+                    <h3 class="feature-title">Analytics แบบ Real-time</h3>
+                    <p class="feature-description">
+                        ข้อมูลเชิงลึกแบบทันที พร้อมการวิเคราะห์และคำแนะนำจาก AI
+                    </p>
+                    <ul class="feature-benefits">
+                        <li>Dashboard แบบ Live</li>
+                        <li>AI Insights & Predictions</li>
+                        <li>Smart Recommendations</li>
+                        <li>Performance Monitoring</li>
+                    </ul>
+                    <div>
+                        <span class="auto-badge">Real-time Dashboard</span>
+                        <span class="auto-badge">AI Insights</span>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in-up">
+                    <span class="feature-icon">🚜</span>
+                    <h3 class="feature-title">ฟาร์ม/ผลิตพืชอัจฉริยะ</h3>
+                    <p class="feature-description">
+                        ระบบจัดการฟาร์มที่ครบครันที่สุด ควบคุมสิ่งแวดล้อมและประสิทธิภาพอัตโนมัติ
+                    </p>
+                    <ul class="feature-benefits">
+                        <li>Auto Environment Control</li>
+                        <li>Growth Tracking</li>
+                        <li>Team Performance</li>
+                        <li>Quality Grading</li>
+                    </ul>
+                    <div>
+                        <span class="auto-badge">Auto Temperature</span>
+                        <span class="auto-badge">Auto Humidity</span>
+                        <span class="auto-badge">Auto Bonus</span>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in-up">
+                    <span class="feature-icon">📱</span>
+                    <h3 class="feature-title">Digital Marketing</h3>
+                    <p class="feature-description">
+                        การตลาดออนไลน์อัตโนมัติ โพสต์เนื้อหา สร้างวิดีโอ และยิงโฆษณาได้เอง
+                    </p>
+                    <ul class="feature-benefits">
+                        <li>Auto Content Posting</li>
+                        <li>Auto Video Generation</li>
+                        <li>Auto Ads Management</li>
+                        <li>A/B Testing</li>
+                    </ul>
+                    <div>
+                        <span class="auto-badge">Auto Posting</span>
+                        <span class="auto-badge">Auto Ads</span>
+                        <span class="auto-badge">Auto Video</span>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in-up">
+                    <span class="feature-icon">💰</span>
+                    <h3 class="feature-title">Financial Management</h3>
+                    <p class="feature-description">
+                        จัดการการเงินและบัญชีอย่างแม่นยำ พร้อมการคำนวณและรายงานอัตโนมัติ
+                    </p>
+                    <ul class="feature-benefits">
+                        <li>Auto Accounting</li>
+                        <li>Auto Payroll</li>
+                        <li>Auto Tax Calculation</li>
+                        <li>Cash Flow Monitoring</li>
+                    </ul>
+                    <div>
+                        <span class="auto-badge">Auto Payroll</span>
+                        <span class="auto-badge">Auto Balance</span>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in-up">
+                    <span class="feature-icon">🏭</span>
+                    <h3 class="feature-title">Smart Production</h3>
+                    <p class="feature-description">
+                        วางแผนการผลิตอัจฉริยะ จัดการ BOM และควบคุมคุณภาพแบบอัตโนมัติ
+                    </p>
+                    <ul class="feature-benefits">
+                        <li>Production Planning</li>
+                        <li>Auto BOM Calculation</li>
+                        <li>Quality Control</li>
+                        <li>Capacity Planning</li>
+                    </ul>
+                    <div>
+                        <span class="auto-badge">Smart Planning</span>
+                        <span class="auto-badge">Auto BOM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modules" class="modules">
+        <div class="modules-container">
+            <div class="section-header">
+                <h2 class="section-title">9 โมดูลหลัก</h2>
+                <p class="section-subtitle">
+                    ครอบคลุมการทำงานทุกแผนกในองค์กร ตั้งแต่การขาย การผลิต ไปจนถึงการตลาด
+                </p>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-header">
+                        <span class="module-icon">📊</span>
+                        <div class="module-title">Master Data</div>
+                    </div>
+                    <div class="module-description">
+                        ศูนย์กลางข้อมูลทั้งหมด จัดการสินค้า ลูกค้า ผู้จำหน่าย และพนักงาน
+                    </div>
+                    <div class="module-features">
+                        <span class="module-feature">ABC Classification</span>
+                        <span class="module-feature">Auto Validation</span>
+                        <span class="module-feature">Risk Assessment</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <span class="module-icon">💰</span>
+                        <div class="module-title">Daily Transaction</div>
+                    </div>
+                    <div class="module-description">
+                        บันทึกรายการประจำวันแบบ Real-time พร้อมการประมวลผลอัตโนมัติ
+                    </div>
+                    <div class="module-features">
+                        <span class="module-feature">POS System</span>
+                        <span class="module-feature">Auto Commission</span>
+                        <span class="module-feature">Invoice Generation</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <span class="module-icon">🔧</span>
+                        <div class="module-title">Operations</div>
+                    </div>
+                    <div class="module-description">
+                        ระบบปฏิบัติการที่ช่วยจัดการงานประจำและการซ่อมบำรุงอัตโนมัติ
+                    </div>
+                    <div class="module-features">
+                        <span class="module-feature">Auto PO</span>
+                        <span class="module-feature">Maintenance</span>
+                        <span class="module-feature">Workflow</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <span class="module-icon">💼</span>
+                        <div class="module-title">Finance & HR</div>
+                    </div>
+                    <div class="module-description">
+                        จัดการการเงิน บัญชี และทรัพยากรบุคคลอย่างครบครันและแม่นยำ
+                    </div>
+                    <div class="module-features">
+                        <span class="module-feature">Auto Payroll</span>
+                        <span class="module-feature">Tax Calculation</span>
+                        <span class="module-feature">Cash Flow</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <span class="module-icon">🏭</span>
+                        <div class="module-title">Production</div>
+                    </div>
+                    <div class="module-description">
+                        วางแผนการผลิตอัจฉริยะ จัดการ BOM และควบคุมคุณภาพ
+                    </div>
+                    <div class="module-features">
+                        <span class="module-feature">Smart Planning</span>
+                        <span class="module-feature">BOM Management</span>
+                        <span class="module-feature">Quality Control</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <span class="module-icon">📈</span>
+                        <div class="module-title">Reports & Analytics</div>
+                    </div>
+                    <div class="module-description">
+                        รายงานและการวิเคราะห์แบบ Real-time พร้อม AI Insights
+                    </div>
+                    <div class="module-features">
+                        <span class="module-feature">Live Dashboard</span>
+                        <span class="module-feature">AI Insights</span>
+                        <span class="module-feature">Predictive Analytics</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <span class="module-icon">📢</span>
+                        <div class="module-title">Marketing & CRM</div>
+                    </div>
+                    <div class="module-description">
+                        ระบบการตลาดและลูกค้าสัมพันธ์อัตโนมัติ 7 แคมเปญ
+                    </div>
+                    <div class="module-features">
+                        <span class="module-feature">Auto Campaigns</span>
+                        <span class="module-feature">Lead Scoring</span>
+                        <span class="module-feature">Customer Journey</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <span class="module-icon">📱</span>
+                        <div class="module-title">Digital Marketing</div>
+                    </div>
+                    <div class="module-description">
+                        การตลาดออนไลน์อัตโนมัติ โพสต์ สร้างวิดีโอ และยิงโฆษณา
+                    </div>
+                    <div class="module-features">
+                        <span class="module-feature">Auto Posting</span>
+                        <span class="module-feature">Video Generation</span>
+                        <span class="module-feature">Ads Management</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <span class="module-icon">🚜</span>
+                        <div class="module-title">Farm & Agriculture</div>
+                    </div>
+                    <div class="module-description">
+                        ระบบจัดการฟาร์มและการผลิตพืชครบครัน ควบคุมสิ่งแวดล้อมและทีมงาน
+                    </div>
+                    <div class="module-features">
+                        <span class="module-feature">Environment Control</span>
+                        <span class="module-feature">Growth Tracking</span>
+                        <span class="module-feature">Team Performance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automation Section -->
+    <section id="automation" class="automation">
+        <div class="automation-container">
+            <div class="automation-content">
+                <h2 class="automation-title">🤖 ระบบอัตโนมัติ 65+ ฟีเจอร์</h2>
+                <p class="automation-subtitle">
+                    ระบบที่ทำงานแทนคุณตลอด 24 ชั่วโมง ลดการทำงานซ้ำซ้อนและเพิ่มประสิทธิภาพอย่างสูงสุด
+                </p>
+            </div>
+            <div class="automation-showcase">
+                <div class="automation-item">
+                    <span class="automation-icon">🛒</span>
+                    <div class="automation-name">Auto Stock Management</div>
+                    <div class="automation-desc">ตัดสต็อคและสั่งซื้ออัตโนมัติ</div>
+                </div>
+                <div class="automation-item">
+                    <span class="automation-icon">💰</span>
+                    <div class="automation-name">Auto Commission</div>
+                    <div class="automation-desc">คำนวณค่าคอมมิชชั่นทันที</div>
+                </div>
+                <div class="automation-item">
+                    <span class="automation-icon">📧</span>
+                    <div class="automation-name">Auto Campaigns</div>
+                    <div class="automation-desc">ส่งแคมเปญการตลาดอัตโนมัติ</div>
+                </div>
+                <div class="automation-item">
+                    <span class="automation-icon">📊</span>
+                    <div class="automation-name">Auto Reports</div>
+                    <div class="automation-desc">สร้างรายงานและส่งอีเมล</div>
+                </div>
+                <div class="automation-item">
+                    <span class="automation-icon">🚜</span>
+                    <div class="automation-name">Smart Farm Control</div>
+                    <div class="automation-desc">ควบคุมฟาร์มและสิ่งแวดล้อม</div>
+                </div>
+                <div class="automation-item">
+                    <span class="automation-icon">📱</span>
+                    <div class="automation-name">Social Media</div>
+                    <div class="automation-desc">โพสต์เนื้อหาอัตโนมัติ</div>
+                </div>
+                <div class="automation-item">
+                    <span class="automation-icon">🎯</span>
+                    <div class="automation-name">Auto Ads</div>
+                    <div class="automation-desc">ยิงโฆษณาและปรับราคา</div>
+                </div>
+                <div class="automation-item">
+                    <span class="automation-icon">💳</span>
+                    <div class="automation-name">Auto Accounting</div>
+                    <div class="automation-desc">บันทึกบัญชีอัตโนมัติ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">พร้อมเริ่มต้นหรือยัง?</h2>
+            <p class="cta-description">
+                เปลี่ยนธุรกิจของคุณให้ทันสมัยด้วยระบบ ERP ที่ครบครันที่สุด 
+                เริ่มใช้งานฟรีได้ทันทีวันนี้
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn-primary">เริ่มใช้งานฟรี</a>
+                <a href="#contact" class="btn-secondary">ขอคำปรึกษา</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <h2 class="section-title">ติดต่อเรา</h2>
+                <p class="section-subtitle">
+                    พร้อมให้คำปรึกษาและสนับสนุนคุณตลอด 24 ชั่วโมง
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>เริ่มต้นเปลี่ยนแปลงธุรกิจ</h2>
+                    <p>
+                        ทีมงานผู้เชี่ยวชาญของเราพร้อมช่วยเหลือคุณในการติดตั้งและใช้งานระบบ 
+                        รวมถึงการฝึกอบรมและสนับสนุนหลังการขาย เฉพาะสำหรับธุรกิจการเกษตรและฟาร์มสมัยใหม่ 
+                        เรามีทีมผู้เชี่ยวชาญด้าน AgriTech โดยเฉพาะ
+                    </p>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">📞</span>
+                        <span class="contact-item-text">02-XXX-XXXX (24 ชั่วโมง)</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">📧</span>
+                        <span class="contact-item-text">info@smasterp.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">📱</span>
+                        <span class="contact-item-text">LINE: @SMAST-ERP</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">🌐</span>
+                        <span class="contact-item-text">www.smasterp.com</span>
+                    </div>
+                </div>
+                <div class="contact-details">
+                    <h3 style="color: #2c3e50; margin-bottom: 20px; font-size: 1.5rem;">✨ ข้อเสนอพิเศษ</h3>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <h4 style="color: #e74c3c; margin-bottom: 10px;">🎁 ลองใช้ฟรี 30 วัน</h4>
+                        <p style="margin-bottom: 15px;">ไม่มีค่าใช้จ่าย ไม่ผูกมัด พร้อมการอบรมฟรี</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>✅ ติดตั้งและตั้งค่าฟรี</li>
+                            <li>✅ อบรมการใช้งาน 8 ชั่วโมง</li>
+                            <li>✅ รับประกันการทำงาน 100%</li>
+                            <li>✅ Support 24/7</li>
+                        </ul>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #00c969 0%, #ff650e 100%); padding: 20px; border-radius: 10px; color: white; text-align: center;">
+                        <h4 style="margin-bottom: 10px;">💰 ROI คืนทุนภายใน 6 เดือน</h4>
+                        <p style="margin-bottom: 15px;">หรือเราคืนเงิน 100%</p>
+                        <a href="tel:02-XXX-XXXX" style="background: white; color: #00c969; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block;">
+                            📞 โทรเลย!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TOP SMAST ERP AI+</h3>
+                    <p>
+                        ระบบบริหารจัดการองค์กรที่ทันสมัยที่สุด พร้อมปัญญาประดิษฐ์ 
+                        และระบบอัตโนมัติที่จะเปลี่ยนธุรกิจของคุณให้ก้าวสู่อนาคต 
+                        เหมาะสำหรับทุกธุรกิจ ตั้งแต่การขาย การผลิต ไปจนถึงฟาร์มและการเกษตร
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>ฟีเจอร์หลัก</h3>
+                    <ul>
+                        <li><a href="#features">ระบบอัตโนมัติ 65+ ฟีเจอร์</a></li>
+                        <li><a href="#modules">9 โมดูลครบครัน</a></li>
+                        <li><a href="#automation">AI & Analytics</a></li>
+                        <li><a href="#features">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>บริการ</h3>
+                    <ul>
+                        <li><a href="#contact">ติดตั้งและตั้งค่า</a></li>
+                        <li><a href="#contact">อบรมการใช้งาน</a></li>
+                        <li><a href="#contact">Support 24/7</a></li>
+                        <li><a href="#contact">ปรับแต่งตามต้องการ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>ติดต่อเรา</h3>
+                    <p>📞 02-XXX-XXXX</p>
+                    <p>📧 info@smasterp.com</p>
+                    <p>📱 LINE: @SMAST-ERP</p>
+                    <p>🌐 www.smasterp.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TOP SMAST ERP AI+. สงวนลิขสิทธิ์ทุกประการ | ระบบบริหารจัดการแห่งอนาคต</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in-up elements
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s ease-out';
+            observer.observe(el);
+        });
+
+        // Add click tracking for buttons
+        document.querySelectorAll('.btn-primary, .btn-secondary, .cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Add loading state
+                const originalText = this.textContent;
+                this.innerHTML = '<span class="loading"></span> กำลังดำเนินการ...';
+                
+                // Simulate loading
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 2000);
+            });
+        });
+
+        // Auto-typing effect for hero title (optional)
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.textContent = '';
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroTitle = document.querySelector('.hero-text h1');
+            if (heroTitle) {
+                const originalText = heroTitle.textContent;
+                setTimeout(() => {
+                    typeWriter(heroTitle, originalText, 80);
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
